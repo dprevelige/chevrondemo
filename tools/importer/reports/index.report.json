@@ -2,13 +2,14 @@
   "status": "success",
   "url": "https://www.chevron.com/",
   "path": "index",
-  "timestamp": "2026-05-15T20:04:01.890Z",
+  "timestamp": "2026-05-15T20:42:01.285Z",
   "title": "Chevron Corporation - Human Energy — Chevron",
   "template": "homepage",
   "blocks": [
     "carousel-hero",
     "hero-marquee",
     "columns-mosaic",
+    "columns-feature",
     "carousel-article"
   ]
 }
