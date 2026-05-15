@@ -1,0 +1,42 @@
+{
+  "variantName": "cards-data",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-15T12:37:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/sustainability/climate",
+    "originPage": "sustainability climate page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "compact",
+    "purpose": "data-metrics",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "title + scope + large metric value",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "data metric cards displaying KPIs or targets",
+      "carbon intensity or emissions target displays",
+      "numeric data grids with labels and large values on dark backgrounds"
+    ],
+    "notSuitableFor": [
+      "cards with images or illustrations",
+      "content cards with descriptions and CTAs",
+      "light-background card grids"
+    ]
+  },
+  "usage": {
+    "pagesUsing": [
+      "/sustainability/climate",
+      "/who-we-are/culture"
+    ],
+    "reuseCount": 2,
+    "lastUsed": "2026-05-15T15:19:51.248Z"
+  }
+}

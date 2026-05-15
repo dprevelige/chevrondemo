@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-contact",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-14T21:30:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/investors",
+    "originPage": "Investors landing page",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "contact-info",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "heading + paragraphs + links per column",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "contact information displayed in side-by-side columns",
+      "address/phone/email layouts with multiple contact sections",
+      "text-only two-column informational layouts"
+    ],
+    "notSuitableFor": [
+      "image-heavy feature layouts",
+      "card grids with repeating items",
+      "visual gallery or mosaic displays"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/investors"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-14T21:30:00.000Z"
+  }
+}

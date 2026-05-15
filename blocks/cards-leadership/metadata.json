@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-leadership",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-15T15:15:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/who-we-are/leadership",
+    "originPage": "Chevron Leadership page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "leadership-profile",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "headshot image + name + title + link",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "leadership team profile grids with headshots",
+      "executive officer listings with photo, name, and title",
+      "board of directors or team member card grids on light backgrounds"
+    ],
+    "notSuitableFor": [
+      "news article cards with dates and descriptions",
+      "feature cards with icons and long descriptions",
+      "dark-themed card grids"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/who-we-are/leadership"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-15T15:15:00.000Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "variantName": "hero-marquee",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-05-14T20:18:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/",
+    "originPage": "Chevron homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "text-marquee",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "eyebrow + animated heading (3 words) + scattered images",
+    "buttonCount": 0,
+    "imageCount": 3
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "animated text marquee sections with rotating words",
+      "who-we-are style identity sections with keywords and employee photos",
+      "dark-themed hero sections with emphasis on text animation"
+    ],
+    "notSuitableFor": [
+      "standard hero sections with single heading and CTA",
+      "hero sections with video backgrounds (use hero-video instead)",
+      "light-themed hero sections"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-14T20:18:00.000Z"
+  }
+}

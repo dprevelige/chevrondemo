@@ -1,0 +1,271 @@
+/* Block: carousel-article -- article card carousel */
+
+/* Extracted values from https://www.chevron.com/who-we-are .c57.carousel-shared */
+
+/* === Base / Mobile-first styles === */
+
+.carousel-article {
+  position: relative;
+}
+
+/* Slides container */
+.carousel-article .carousel-article-slides-container {
+  position: relative;
+}
+
+.carousel-article .carousel-article-slides,
+.carousel-article .carousel-article-slide-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Horizontal scroll track */
+.carousel-article .carousel-article-slides {
+  display: flex;
+  gap: 24px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  overflow: auto clip;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carousel-article .carousel-article-slides::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual slide (card) */
+.carousel-article .carousel-article-slide {
+  flex: 0 0 85%;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 400px;
+  position: relative;
+}
+
+/* Alternating card background colors:
+   Slides 0,1: medium-blue  #0066b2
+   Slides 2,3: dark-teal    #003653
+   Slide 4:    medium-blue  #0066b2
+*/
+.carousel-article .carousel-article-slide:nth-child(odd) {
+  background-color: var(--color-medium-blue);
+}
+
+.carousel-article .carousel-article-slide:nth-child(even) {
+  background-color: var(--color-dark-teal);
+}
+
+/* Image cell */
+.carousel-article .carousel-article-slide .carousel-article-slide-image {
+  flex: 0 0 auto;
+  line-height: 0;
+}
+
+.carousel-article .carousel-article-slide .carousel-article-slide-image picture {
+  position: relative;
+  display: block;
+}
+
+.carousel-article .carousel-article-slide .carousel-article-slide-image picture > img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+/* Content cell (below image) */
+.carousel-article .carousel-article-slide .carousel-article-slide-content {
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px 24px 24px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  background: none;
+  width: auto;
+  margin: 0;
+}
+
+/* Date text */
+.carousel-article .carousel-article-slide-content > p:first-child {
+  font-size: 14px;
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  line-height: 18px;
+  color: #fff;
+  margin: 0 0 10px;
+}
+
+/* H3 headline */
+.carousel-article .carousel-article-slide-content h3 {
+  font-size: 20px;
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  line-height: 24px;
+  color: #fff;
+  margin: 0 0 21px;
+  letter-spacing: normal;
+}
+
+/* CTA link — reset EDS button styling */
+.carousel-article .carousel-article-slide-content .button-container {
+  margin-top: auto;
+  margin-bottom: 0;
+  display: block;
+}
+
+.carousel-article .carousel-article-slide-content a.button:any-link {
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: var(--body-font-family-bold);
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.carousel-article .carousel-article-slide-content a.button:hover {
+  background: none;
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Arrow icon after CTA text */
+.carousel-article .carousel-article-slide-content a.button::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M4 10h12m0 0l-5-5m5 5l-5 5' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
+
+/* === Controls area: [prev] [dots] [next] === */
+
+/* Nav container holds: button.slide-prev, ol.indicators, button.slide-next */
+.carousel-article > nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0 0;
+  gap: 0;
+}
+
+/* Navigation dots */
+.carousel-article .carousel-article-slide-indicators {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  padding: 0 24px;
+  line-height: 0;
+}
+
+/* Individual dot */
+.carousel-article .carousel-article-slide-indicator button {
+  width: 24px;
+  height: 8px;
+  margin: 4px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #dadada;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Active/hover/focus dot */
+.carousel-article .carousel-article-slide-indicator button:disabled,
+.carousel-article .carousel-article-slide-indicator button:hover,
+.carousel-article .carousel-article-slide-indicator button:focus-visible {
+  background-color: #000;
+}
+
+/* Prev/Next arrow buttons (direct children of nav) */
+/* stylelint-disable-next-line no-descending-specificity */
+.carousel-article > nav > button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  margin: 0;
+  padding: 0;
+  border: 2px solid #000;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: #000;
+  display: none;
+}
+
+/* stylelint-disable no-descending-specificity */
+.carousel-article > nav > button:hover,
+.carousel-article > nav > button:focus-visible {
+/* stylelint-enable no-descending-specificity */
+  background-color: rgba(0 0 0 / 10%);
+}
+
+/* Arrow chevrons via pseudo-elements */
+.carousel-article > nav > button::after {
+  display: block;
+  content: '';
+  border: 2px solid #000;
+  border-bottom: 0;
+  border-left: 0;
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 2px);
+  transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+.carousel-article > nav > button.slide-next::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+  left: calc(50% - 2px);
+}
+
+/* Hide the old nav buttons container (now empty after JS moves buttons) */
+.carousel-article .carousel-article-navigation-buttons {
+  display: none;
+}
+
+/* === Desktop (900px+) === */
+
+@media (width >= 900px) {
+  .carousel-article .carousel-article-slide {
+    flex: 0 0 calc((100% - 48px) / 3);
+    min-height: 472px;
+  }
+
+  .carousel-article .carousel-article-slide-content h3 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  /* Show prev/next arrows at desktop */
+  .carousel-article > nav > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

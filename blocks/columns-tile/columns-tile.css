@@ -1,0 +1,240 @@
+/* columns-tile: full-width split-tile layout with colored halves */
+
+/* Extracted from source: chevron.com/who-we-are .c64.animated */
+
+/* --- Wrapper: full-width override --- */
+.columns-tile-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+/* --- Block root --- */
+.columns-tile {
+  color: #fff;
+  text-align: left;
+}
+
+/* --- Row: flex column on mobile, row on desktop --- */
+.columns-tile > div {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+/* --- Cells: base styles --- */
+.columns-tile > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Cell 1 (text half): padding and vertical centering */
+.columns-tile > div > div:first-child {
+  padding: 48px 32px;
+  min-height: 320px;
+}
+
+/* Cell 2 (image+card half) */
+.columns-tile > div > div:last-child {
+  padding: 0;
+  justify-content: flex-start;
+}
+
+/* --- Images: fill the top portion of card half --- */
+.columns-tile img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Image wrapper paragraph — EDS wraps bare images in <p> */
+.columns-tile > div > div:last-child > p:first-child {
+  margin: 0;
+  line-height: 0;
+}
+
+.columns-tile > div > div:last-child > p:first-child picture {
+  display: block;
+  line-height: 0;
+}
+
+/* --- H2: large display heading (text half) --- */
+
+/* Source: font-size 96px, font-family GothamBlack, line-height 100px, letter-spacing -1.92px */
+.columns-tile h2 {
+  font-size: 40px;
+  font-weight: 400;
+  font-family: var(--heading-font-family);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin: 0 0 24px;
+}
+
+/* --- Description paragraph (text half) --- */
+
+/* Source: font-size 24px, font-family GothamNarrowBook, line-height 30px */
+/* stylelint-disable-next-line no-descending-specificity */
+.columns-tile > div > div:first-child p {
+  font-size: 18px;
+  font-family: var(--body-font-family);
+  line-height: 1.25;
+  color: #fff;
+  margin: 0;
+}
+
+/* --- H3: card heading below image --- */
+
+/* Source: font-size 40px, font-family GothamNarrowBook, line-height ~1.1 */
+.columns-tile > div > div:last-child h3 {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: var(--body-font-family);
+  line-height: 1.2;
+  color: #fff;
+  margin: 0 0 auto;
+  padding: 32px 32px 0;
+}
+
+/* --- CTA link ("Learn more") --- */
+
+/* Source: font-size 16px, font-family GothamBold */
+.columns-tile > div > div:last-child .button-container {
+  display: block;
+  padding: 24px 32px 32px;
+  margin: 0;
+}
+
+main .columns-tile a.button:any-link {
+  font-size: 16px;
+  font-family: GothamBold, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+  display: inline;
+}
+
+main .columns-tile a.button:hover {
+  background: none;
+  color: #fff;
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+/* ============================================
+   COLOR THEMES via JS-applied classes
+   ============================================ */
+
+/* --- Theme: Purple (Our Purpose) --- */
+
+/* Source: text-half bg rgb(58, 13, 54), card-half bg rgb(117, 18, 105) */
+.columns-tile.theme-purple > div > div:first-child {
+  background-color: var(--color-dark-purple);
+}
+
+.columns-tile.theme-purple > div > div:last-child {
+  background-color: var(--color-medium-purple);
+}
+
+/* --- Theme: Teal (Our Culture) --- */
+
+/* Source: text-half bg rgb(0, 54, 83), card-half bg rgb(0, 112, 140) */
+.columns-tile.theme-teal > div > div:first-child {
+  background-color: var(--color-dark-teal);
+}
+
+.columns-tile.theme-teal > div > div:last-child {
+  background-color: var(--color-medium-teal);
+}
+
+/* --- Theme: Blue (Industry Innovation) --- */
+
+/* Source: text-half bg rgb(11, 45, 113), card-half bg rgb(0, 102, 178) */
+.columns-tile.theme-blue > div > div:first-child {
+  background-color: var(--color-dark-blue);
+}
+
+.columns-tile.theme-blue > div > div:last-child {
+  background-color: var(--color-medium-blue);
+}
+
+/* ============================================
+   DESKTOP LAYOUT (>= 900px)
+   ============================================ */
+@media (width >= 900px) {
+  .columns-tile > div {
+    flex-direction: row;
+    min-height: 810px;
+  }
+
+  .columns-tile > div > div {
+    flex: 1;
+    width: 50%;
+  }
+
+  /* Text half: larger padding and heading on desktop */
+
+  /* Source: padding 48px 56px */
+  .columns-tile > div > div:first-child {
+    padding: 48px 56px;
+    min-height: 810px;
+  }
+
+  /* Source: font-size 96px, line-height 100px, letter-spacing -1.92px */
+  .columns-tile h2 {
+    font-size: 96px;
+    line-height: 100px;
+    letter-spacing: -1.92px;
+    margin: 0 0 24px;
+  }
+
+  /* Source: font-size 24px, line-height 30px */
+  .columns-tile > div > div:first-child p {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  /* Card half: image fills top, card text fills bottom */
+  .columns-tile > div > div:last-child {
+    justify-content: flex-start;
+  }
+
+  /* Image area: fills top half (flex: 1 to share space with card text) */
+  .columns-tile > div > div:last-child > p:first-child {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .columns-tile > div > div:last-child > p:first-child img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Card text area: h3 + CTA */
+
+  /* Source: h3 font-size 40px, padding 48px */
+  .columns-tile > div > div:last-child h3 {
+    font-size: 40px;
+    line-height: 1.1;
+    padding: 48px 48px 0;
+  }
+
+  /* Source: CTA padding 48px */
+  .columns-tile > div > div:last-child .button-container {
+    padding: 24px 48px 48px;
+  }
+
+  /* Reversed layout: image+card on LEFT, text on RIGHT */
+  /* stylelint-disable-next-line no-descending-specificity */
+  .columns-tile.reversed > div {
+    flex-direction: row-reverse;
+  }
+}

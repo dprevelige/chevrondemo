@@ -1,0 +1,39 @@
+{
+  "variantName": "carousel-image",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-05-15T15:20:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/who-we-are/culture",
+    "originPage": "Chevron Culture corporate page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "wide",
+    "purpose": "image-gallery",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + caption per slide",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "image gallery carousels with photo and caption text",
+      "community impact photo slideshows",
+      "visual storytelling sections with image + description per slide"
+    ],
+    "notSuitableFor": [
+      "article carousels with dates and headlines (use carousel-article)",
+      "feature story carousels with split text/image layout (use carousel-feature)",
+      "hero carousels with video backgrounds (use carousel-hero)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/who-we-are/culture"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-15T15:20:00.000Z"
+  }
+}

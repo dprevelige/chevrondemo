@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-stock",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-14T21:30:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/investors",
+    "originPage": "Investors landing page",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "colored",
+    "density": "compact",
+    "purpose": "stock-data",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "heading + timestamp + data pairs + CTA",
+    "buttonCount": 1,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "stock ticker/price display widgets",
+      "financial data cards with structured label-value pairs",
+      "compact investor data displays with colored backgrounds"
+    ],
+    "notSuitableFor": [
+      "image-based side-by-side layouts",
+      "feature highlight sections with large images",
+      "text-heavy article-style columns"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/investors"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-14T21:30:00.000Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "variantName": "embed-video",
+  "baseBlock": "embed",
+  "version": "1.0.0",
+  "created": "2026-05-15T12:35:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/sustainability/social-investment",
+    "originPage": "Social Investment sustainability page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "video-embed",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "thumbnail image + play button + youtube link",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "YouTube or Vimeo video embeds with thumbnail preview",
+      "embedded video content with play-on-click interaction",
+      "featured video sections on dark backgrounds"
+    ],
+    "notSuitableFor": [
+      "interactive maps or external web content",
+      "social media post embeds (Twitter/Instagram)",
+      "background autoplay videos without controls"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/sustainability/social-investment", "/what-we-do/technology-and-innovation"],
+    "reuseCount": 2,
+    "lastUsed": "2026-05-15T13:45:00.000Z"
+  }
+}

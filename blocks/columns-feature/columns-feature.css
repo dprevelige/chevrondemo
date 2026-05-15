@@ -1,0 +1,224 @@
+/* Block: columns-feature
+ * Large image-and-text feature cards with colored background panels.
+ * Extracted values from source: chevron.com /who-we-are .c69.contained
+ *
+ * DOM (after decorate):
+ *   .columns-feature.block.columns-feature-2-cols[data-theme="dark-red|dark-teal|dark-orange"]
+ *     div (row)
+ *       div.columns-feature-img-col > picture > img
+ *       div (text cell) > h2 + p + p.button-container > a.button
+ */
+
+/* ------------------------------------------------------------------ */
+
+/* Wrapper: keep content contained within max-width, remove side      */
+
+/* padding so the blocks can use full width. Stack with no gap.       */
+
+/* ------------------------------------------------------------------ */
+.columns-feature-wrapper {
+  max-width: 1200px !important;
+  padding: 0 !important;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* Block root                                                          */
+
+/* ------------------------------------------------------------------ */
+.columns-feature {
+  overflow: hidden;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* Mobile: stack vertically, image on top                              */
+
+/* ------------------------------------------------------------------ */
+.columns-feature > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns-feature > div > div {
+  order: 1;
+}
+
+.columns-feature > div > .columns-feature-img-col {
+  order: 0;
+}
+
+/* Image cell */
+.columns-feature > div > .columns-feature-img-col img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text cell — colored panel */
+.columns-feature > div > div:not(.columns-feature-img-col) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 32px;
+  color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* Typography — from source computed styles                            */
+
+/* ------------------------------------------------------------------ */
+
+/* h2: GothamBlack 40px/44px, letter-spacing -0.32px, margin-bottom 24px */
+.columns-feature h2 {
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-l);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.32px;
+  margin: 0 0 24px;
+}
+
+/* Description paragraph: 18px/26px GothamNarrowBook, white */
+.columns-feature p {
+  font-size: 18px;
+  font-family: var(--body-font-family);
+  line-height: 26px;
+  color: #fff;
+  margin: 0 0 16px;
+}
+
+/* CTA link: 16px GothamBold, white, with underline */
+main .columns-feature a.button:any-link {
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 10px 0 0;
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+  font-family: GothamBold, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  display: inline-block;
+  white-space: normal;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 2px;
+}
+
+main .columns-feature a.button:hover {
+  background: none;
+  color: #fff;
+  opacity: 0.85;
+}
+
+/* Button container reset */
+main .columns-feature .button-container {
+  display: block;
+  margin: 0;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* Per-instance theme colors                                           */
+
+/* Source: 1st=#58001c (dark-red), 2nd=#003653 (dark-teal),           */
+
+/*         3rd=#711b00 (dark-orange)                                   */
+
+/* Heading accent: 1st=rgb(226,24,54), 2nd=rgb(0,178,189),           */
+
+/*                 3rd=rgb(250,171,24)                                 */
+
+/* ------------------------------------------------------------------ */
+
+/* Dark Red theme (Our brands) */
+.columns-feature[data-theme="dark-red"] > div > div:not(.columns-feature-img-col) {
+  background-color: var(--color-dark-red);
+}
+
+.columns-feature[data-theme="dark-red"] h2 {
+  color: #e21836;
+}
+
+/* Dark Teal theme (Leadership) */
+.columns-feature[data-theme="dark-teal"] > div > div:not(.columns-feature-img-col) {
+  background-color: var(--color-dark-teal);
+}
+
+.columns-feature[data-theme="dark-teal"] h2 {
+  color: #00b2bd;
+}
+
+/* Dark Orange theme (Careers) */
+.columns-feature[data-theme="dark-orange"] > div > div:not(.columns-feature-img-col) {
+  background-color: var(--color-dark-orange);
+}
+
+.columns-feature[data-theme="dark-orange"] h2 {
+  color: #faab18;
+}
+
+/* Fallback if no theme attribute — use dark-red as default */
+.columns-feature:not([data-theme]) > div > div:not(.columns-feature-img-col) {
+  background-color: var(--color-dark-red);
+}
+
+.columns-feature:not([data-theme]) h2 {
+  color: #e21836;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* Desktop: side-by-side 50/50 layout                                  */
+
+/* Source: flex, flex: 1 0 50% on each col, no gap                     */
+
+/* Alternating: even instances reverse (image left, text right)        */
+
+/* ------------------------------------------------------------------ */
+@media (width >= 900px) {
+  .columns-feature > div {
+    flex-direction: row;
+  }
+
+  .columns-feature > div > div {
+    flex: 0 0 50%;
+    max-width: 50%;
+    min-width: 0;
+    order: unset;
+    box-sizing: border-box;
+  }
+
+  /* Text cell desktop padding: 24px 48px from source */
+  .columns-feature > div > div:not(.columns-feature-img-col) {
+    padding: 24px 48px;
+    min-height: 390px;
+  }
+
+  /* Image cell fills its half */
+  .columns-feature > div > .columns-feature-img-col {
+    order: unset;
+  }
+
+  /* Alternating layout: even instances (2nd, 4th...) reverse row */
+  /* stylelint-disable-next-line no-descending-specificity */
+  .columns-feature[data-layout="reversed"] > div {
+    flex-direction: row-reverse;
+  }
+
+  /* h2 desktop size: 40px from source */
+  .columns-feature h2 {
+    font-size: 40px;
+    line-height: 44px;
+  }
+}

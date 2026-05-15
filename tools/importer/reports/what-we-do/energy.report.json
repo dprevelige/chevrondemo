@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.chevron.com/what-we-do/energy",
+  "path": "what-we-do/energy",
+  "timestamp": "2026-05-15T13:53:59.978Z",
+  "title": "Energy Solutions — Chevron",
+  "template": "what-we-do-topic",
+  "blocks": [
+    "hero-video",
+    "columns-feature",
+    "columns-feature",
+    "columns-feature",
+    "columns-feature",
+    "carousel-article"
+  ]
+}

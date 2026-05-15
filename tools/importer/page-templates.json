@@ -1,0 +1,731 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "who-we-are",
+      "urls": [
+        "https://www.chevron.com/who-we-are"
+      ],
+      "description": "Corporate about/who we are landing page with company overview content",
+      "blocks": [
+        {
+          "name": "hero-video",
+          "instances": [
+            ".c74.video-common"
+          ]
+        },
+        {
+          "name": "columns-mosaic",
+          "instances": [
+            ".c72.background-color-dark-blue"
+          ]
+        },
+        {
+          "name": "columns-tile",
+          "instances": [
+            ".c64.right.background-color-white:nth-child(5)",
+            ".c64.left.background-color-white",
+            ".c64.right.background-color-white:nth-child(7)"
+          ]
+        },
+        {
+          "name": "columns-feature",
+          "instances": [
+            ".c69.contained"
+          ]
+        },
+        {
+          "name": "carousel-article",
+          "instances": [
+            ".c57.carousel-shared"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero",
+          "selector": ".c74.video-common",
+          "style": null,
+          "blocks": [
+            "hero-video"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "What We Believe",
+          "selector": ".c06r.background-color-dark-blue.text-elevated",
+          "style": "dark-blue",
+          "blocks": [],
+          "defaultContent": [
+            ".c06r.background-color-dark-blue.text-elevated h2",
+            ".c06r.background-color-dark-blue.text-elevated .description",
+            ".c06r.background-color-dark-blue.text-elevated a"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Video Montage Grid",
+          "selector": ".c72.background-color-dark-blue",
+          "style": "dark-blue",
+          "blocks": [
+            "columns-mosaic"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Our Purpose",
+          "selector": ".c64.right.background-color-white:nth-child(5)",
+          "style": null,
+          "blocks": [
+            "columns-tile"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-5",
+          "name": "Our Culture",
+          "selector": ".c64.left.background-color-white",
+          "style": null,
+          "blocks": [
+            "columns-tile"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-6",
+          "name": "Industry Innovation",
+          "selector": ".c64.right.background-color-white:nth-child(7)",
+          "style": null,
+          "blocks": [
+            "columns-tile"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-7",
+          "name": "Human Ingenuity / History",
+          "selector": [
+            ".c06r.background-color-dark-green.text-reduced",
+            ".c17e.background-color-dark-green"
+          ],
+          "style": "dark-green",
+          "blocks": [],
+          "defaultContent": [
+            ".c06r.background-color-dark-green h2",
+            ".c06r.background-color-dark-green .description",
+            ".c06r.background-color-dark-green a",
+            ".c17e.background-color-dark-green img"
+          ]
+        },
+        {
+          "id": "section-8",
+          "name": "Focus on Quality",
+          "selector": ".c06r.background-color-white.text-reduced",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".c06r.background-color-white.text-reduced h2",
+            ".c06r.background-color-white.text-reduced .description"
+          ]
+        },
+        {
+          "id": "section-9",
+          "name": "Brands / Leadership / Careers",
+          "selector": ".c69.contained",
+          "style": null,
+          "blocks": [
+            "columns-feature"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-10",
+          "name": "Latest in Chevron",
+          "selector": ".c57.carousel-shared",
+          "style": null,
+          "blocks": [
+            "carousel-article"
+          ],
+          "defaultContent": [
+            ".c57 .opening-content .type-eyebrow",
+            ".c57 .opening-content h2"
+          ]
+        },
+        {
+          "id": "section-11",
+          "name": "Email Updates Banner",
+          "selector": ".c60.background-color-dark-blue",
+          "style": "dark-blue",
+          "blocks": [],
+          "defaultContent": [
+            ".c60 h2",
+            ".c60 a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "what-we-do",
+      "urls": [
+        "https://www.chevron.com/what-we-do"
+      ],
+      "description": "Corporate what we do landing page with energy solutions and business overview",
+      "blocks": [
+        {
+          "name": "hero-video",
+          "instances": [
+            ".c74.video-common"
+          ]
+        },
+        {
+          "name": "columns-mosaic",
+          "instances": [
+            ".c72.background-color-dark-blue",
+            ".c75.background-color-dark-purple .card-container"
+          ]
+        },
+        {
+          "name": "carousel-article",
+          "instances": [
+            ".c57.carousel-shared"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero",
+          "selector": ".c74.video-common",
+          "style": null,
+          "blocks": [
+            "hero-video"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Affordable Energy",
+          "selector": [
+            ".c06r.background-color-dark-blue.text-reduced",
+            ".c72.background-color-dark-blue"
+          ],
+          "style": "dark-blue",
+          "blocks": [
+            "columns-mosaic"
+          ],
+          "defaultContent": [
+            ".c06r.background-color-dark-blue h2",
+            ".c06r.background-color-dark-blue .description",
+            ".c06r.background-color-dark-blue a"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Technology & Innovation",
+          "selector": [
+            ".c06r.background-color-medium-teal.text-reduced",
+            ".c17e.background-color-medium-teal"
+          ],
+          "style": "teal",
+          "blocks": [],
+          "defaultContent": [
+            ".c06r.background-color-medium-teal h2",
+            ".c06r.background-color-medium-teal .description",
+            ".c06r.background-color-medium-teal a",
+            ".c17e.background-color-medium-teal img"
+          ]
+        },
+        {
+          "id": "section-4",
+          "name": "Delivering Energy Globally",
+          "selector": ".c75.background-color-dark-purple",
+          "style": "dark-purple",
+          "blocks": [
+            "columns-mosaic"
+          ],
+          "defaultContent": [
+            ".c75 h2",
+            ".c75 .description",
+            ".c75 a.cta-button"
+          ]
+        },
+        {
+          "id": "section-5",
+          "name": "Latest at Chevron",
+          "selector": ".c57.carousel-shared.background-color-offwhite",
+          "style": "off-white",
+          "blocks": [
+            "carousel-article"
+          ],
+          "defaultContent": [
+            ".c57 .opening-content .type-eyebrow",
+            ".c57 .opening-content h3"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "sustainability",
+      "urls": [
+        "https://www.chevron.com/sustainability"
+      ],
+      "description": "Sustainability landing page with environmental and social responsibility content",
+      "blocks": [
+        {
+          "name": "hero-video",
+          "instances": [
+            ".c74.video-common"
+          ]
+        },
+        {
+          "name": "embed-map",
+          "instances": [
+            "#mod_sustainabilitymap.map-2024"
+          ]
+        },
+        {
+          "name": "cards-topic",
+          "instances": [
+            ".c75.background-color-offwhite .card-container"
+          ]
+        },
+        {
+          "name": "carousel-article",
+          "instances": [
+            ".c57.carousel-shared"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero",
+          "selector": ".c74.video-common",
+          "style": null,
+          "blocks": [
+            "hero-video"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Around the World Map",
+          "selector": "#mod_sustainabilitymap.map-2024",
+          "style": null,
+          "blocks": [
+            "embed-map"
+          ],
+          "defaultContent": [
+            ".map-2024 .upper-header",
+            ".map-2024 .upper-description p"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "ESG Banner",
+          "selector": ".c60.background-color-offwhite",
+          "style": "medium-blue",
+          "blocks": [],
+          "defaultContent": [
+            ".c60 h3",
+            ".c60 .cta-underline"
+          ]
+        },
+        {
+          "id": "section-4",
+          "name": "Energy Topics",
+          "selector": [
+            ".c06r.background-color-offwhite.text-base",
+            ".c75.background-color-offwhite"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-topic"
+          ],
+          "defaultContent": [
+            ".c06r.background-color-offwhite h2",
+            ".c06r.background-color-offwhite .description"
+          ]
+        },
+        {
+          "id": "section-5",
+          "name": "Additional Resources",
+          "selector": [
+            ".c06r.background-color-offwhite:last-of-type",
+            ".c63.background-color-offwhite"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".c06r.background-color-offwhite:last-of-type h2",
+            ".c63 .list-container a"
+          ]
+        },
+        {
+          "id": "section-6",
+          "name": "Latest at Chevron",
+          "selector": ".c57.carousel-shared.background-color-offwhite",
+          "style": null,
+          "blocks": [
+            "carousel-article"
+          ],
+          "defaultContent": [
+            ".c57 .opening-content .type-eyebrow",
+            ".c57 .opening-content h3"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "homepage",
+      "urls": [
+        "https://www.chevron.com/"
+      ],
+      "description": "Chevron corporate homepage with hero carousel, featured content, and news",
+      "blocks": [
+        {
+          "name": "carousel-hero",
+          "instances": [
+            ".c70.video-common.carousel-shared"
+          ]
+        },
+        {
+          "name": "hero-marquee",
+          "instances": [
+            ".text-marquee.background-color-dark-blue"
+          ]
+        },
+        {
+          "name": "columns-mosaic",
+          "instances": [
+            ".c72.background-color-offwhite"
+          ]
+        },
+        {
+          "name": "columns-feature",
+          "instances": [
+            ".c73.background-color-offwhite"
+          ]
+        },
+        {
+          "name": "carousel-article",
+          "instances": [
+            ".c57.carousel-shared.background-color-offwhite"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero Carousel",
+          "selector": ".c70.video-common.carousel-shared",
+          "style": null,
+          "blocks": [
+            "carousel-hero"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Who We Are Marquee",
+          "selector": ".text-marquee.background-color-dark-blue",
+          "style": null,
+          "blocks": [
+            "hero-marquee"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "Mission Statement",
+          "selector": ".c85.background-color-dark-blue",
+          "style": "dark-blue",
+          "blocks": [],
+          "defaultContent": [
+            ".c85 .text-container",
+            ".c85 a"
+          ]
+        },
+        {
+          "id": "section-4",
+          "name": "What We Do",
+          "selector": ".c06r.background-color-offwhite",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".c06r.background-color-offwhite .type-eyebrow",
+            ".c06r.background-color-offwhite h2",
+            ".c06r.background-color-offwhite .description",
+            ".c06r.background-color-offwhite a"
+          ]
+        },
+        {
+          "id": "section-5",
+          "name": "Operations Mosaic",
+          "selector": ".c72.background-color-offwhite",
+          "style": null,
+          "blocks": [
+            "columns-mosaic"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-6",
+          "name": "Lower Carbon Solutions",
+          "selector": ".c73.background-color-offwhite",
+          "style": null,
+          "blocks": [
+            "columns-feature"
+          ],
+          "defaultContent": [
+            ".c73 .heading-container h2"
+          ]
+        },
+        {
+          "id": "section-7",
+          "name": "Latest at Chevron",
+          "selector": ".c57.carousel-shared.background-color-offwhite",
+          "style": null,
+          "blocks": [
+            "carousel-article"
+          ],
+          "defaultContent": [
+            ".c57 .opening-content .type-eyebrow",
+            ".c57 .opening-content h3"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "investors",
+      "urls": [
+        "https://www.chevron.com/investors"
+      ],
+      "description": "Investor relations landing page with financial data, news, events, stock info, and contacts",
+      "blocks": [
+        {
+          "name": "hero-video",
+          "instances": [
+            ".c01r.video-common"
+          ]
+        },
+        {
+          "name": "carousel-article",
+          "instances": [
+            "#mod_3b4b0f65.c57.carousel-shared"
+          ]
+        },
+        {
+          "name": "columns-data",
+          "instances": [
+            ".c63.background-color-offwhite",
+            ".c11b.background-color-offwhite.column-count-xs-2.column-count-md-2"
+          ]
+        },
+        {
+          "name": "cards-news",
+          "instances": [
+            ".c75.background-color-dark-purple"
+          ]
+        },
+        {
+          "name": "carousel-event",
+          "instances": [
+            "#mod_e8d51090.c57.carousel-shared"
+          ]
+        },
+        {
+          "name": "cards-icon",
+          "instances": [
+            ".c11b.background-color-dark-blue"
+          ]
+        },
+        {
+          "name": "columns-stock",
+          "instances": [
+            ".c67a.background-color-offwhite"
+          ]
+        },
+        {
+          "name": "columns-contact",
+          "instances": [
+            "#mod_042790f4.c06r",
+            "#mod_22b0d965.c06r"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero",
+          "selector": ".c01r.video-common",
+          "style": null,
+          "blocks": [
+            "hero-video"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Featured Content and Earnings",
+          "selector": [
+            "#mod_3b4b0f65.c57",
+            "#mod_f0484c0a.c06r",
+            "#mod_5fbb3235.c06r",
+            "#mod_09158f7b.c63",
+            "#mod_83973b70.c11b"
+          ],
+          "style": null,
+          "blocks": [
+            "carousel-article",
+            "columns-data"
+          ],
+          "defaultContent": [
+            "#mod_f0484c0a h2",
+            "#mod_f0484c0a a",
+            "#mod_5fbb3235 h2"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Latest News",
+          "selector": ".c75.background-color-dark-purple",
+          "style": "dark-purple",
+          "blocks": [
+            "cards-news"
+          ],
+          "defaultContent": [
+            ".c75.background-color-dark-purple h2",
+            ".c75.background-color-dark-purple > .inner-container > .text-container > a"
+          ]
+        },
+        {
+          "id": "section-4",
+          "name": "Events and Presentations",
+          "selector": [
+            "#mod_75adb953.c06r",
+            "#mod_e8d51090.c57"
+          ],
+          "style": null,
+          "blocks": [
+            "carousel-event"
+          ],
+          "defaultContent": [
+            "#mod_75adb953 h2",
+            "#mod_75adb953 a"
+          ]
+        },
+        {
+          "id": "section-5",
+          "name": "Higher Returns Lower Carbon",
+          "selector": [
+            "#mod_06db96e3.c06r",
+            "#mod_d51edad7.c11b"
+          ],
+          "style": "dark-blue",
+          "blocks": [
+            "cards-icon"
+          ],
+          "defaultContent": [
+            "#mod_06db96e3 h2",
+            "#mod_06db96e3 .description",
+            "#mod_06db96e3 a"
+          ]
+        },
+        {
+          "id": "section-6",
+          "name": "ESG",
+          "selector": [
+            "#mod_bed93461.c06r",
+            "#mod_9bf3988f.c17e",
+            "#mod_623e7612.c63"
+          ],
+          "style": "dark-teal",
+          "blocks": [],
+          "defaultContent": [
+            "#mod_bed93461 h2",
+            "#mod_bed93461 .description",
+            "#mod_bed93461 a",
+            "#mod_9bf3988f img",
+            "#mod_623e7612 a"
+          ]
+        },
+        {
+          "id": "section-7",
+          "name": "Stock and Dividend",
+          "selector": ".c67a.background-color-offwhite",
+          "style": null,
+          "blocks": [
+            "columns-stock"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-8",
+          "name": "Contacts",
+          "selector": [
+            "#mod_4a35a2db.c06r",
+            "#mod_042790f4.c06r",
+            "#mod_22b0d965.c06r"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-contact"
+          ],
+          "defaultContent": [
+            "#mod_4a35a2db h2"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "sustainability-topic",
+      "urls": [
+        "https://www.chevron.com/sustainability/climate",
+        "https://www.chevron.com/sustainability/environment",
+        "https://www.chevron.com/sustainability/social-investment"
+      ],
+      "description": "Sustainability topic sub-pages covering climate, environment, and social investment",
+      "blocks": [
+        {
+          "name": "accordion-social",
+          "instances": [
+            ".c66.background-color-dark-teal"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "what-we-do-topic",
+      "urls": [
+        "https://www.chevron.com/what-we-do/energy",
+        "https://www.chevron.com/what-we-do/technology-and-innovation"
+      ],
+      "description": "What we do topic sub-pages covering energy and technology/innovation",
+      "blocks": [
+        {
+          "name": "carousel-feature",
+          "instances": [
+            ".c56.carousel-shared"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "who-we-are-topic",
+      "urls": [
+        "https://www.chevron.com/who-we-are/culture",
+        "https://www.chevron.com/who-we-are/our-brands",
+        "https://www.chevron.com/who-we-are/leadership",
+        "https://www.chevron.com/who-we-are/history"
+      ],
+      "description": "Who we are topic sub-pages covering culture, brands, leadership, and history",
+      "blocks": []
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "variantName": "hero-brand",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-05-15T15:20:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/who-we-are/our-brands",
+    "originPage": "Our Brands corporate page",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "brand-landing",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "heading + description",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "brand or sub-section landing pages with background image",
+      "hero sections with H1 heading and descriptive text overlay",
+      "dark-themed page introductions without CTA buttons"
+    ],
+    "notSuitableFor": [
+      "hero sections with animated text or rotating words (use hero-marquee)",
+      "hero sections with video backgrounds (use hero-video)",
+      "hero sections that need prominent CTA buttons"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/who-we-are/our-brands"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-15T15:20:00.000Z"
+  }
+}

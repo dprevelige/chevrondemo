@@ -1,0 +1,57 @@
+:root {
+  /* Chevron brand colors */
+  --background-color: #fff;
+  --text-color: #000;
+  --heading-color: #0b2d71;
+  --link-color: #0b2d71;
+  --link-hover-color: #0066b2;
+
+  /* section palette */
+  --color-dark-blue: #0b2d71;
+  --color-medium-blue: #0066b2;
+  --color-dark-green: #444b0d;
+  --color-dark-purple: #3a0d36;
+  --color-medium-purple: #751269;
+  --color-dark-teal: #003653;
+  --color-medium-teal: #00708c;
+  --color-dark-red: #58001c;
+  --color-dark-orange: #711b00;
+  --color-dark-gray: #6b6d6f;
+  --color-off-white: #f4f4f4;
+
+  /* Chevron brand fonts — self-hosted Gotham family */
+  --heading-font-family: "GothamBlack", "Helvetica Neue", helvetica, arial, sans-serif;
+  --body-font-family: "GothamNarrowBook", "Helvetica Neue", helvetica, arial, sans-serif;
+  --body-font-family-bold: "GothamNarrowBold", "Helvetica Neue", helvetica, arial, sans-serif;
+  --body-font-family-book: "GothamBook", "Helvetica Neue", helvetica, arial, sans-serif;
+
+  /* body sizes */
+  --body-font-size-m: 16px;
+  --body-font-size-s: 14px;
+  --body-font-size-xs: 12px;
+
+  /* heading sizes — mobile first */
+  --heading-font-size-xxl: 36px;
+  --heading-font-size-xl: 28px;
+  --heading-font-size-l: 24px;
+  --heading-font-size-m: 20px;
+  --heading-font-size-s: 18px;
+  --heading-font-size-xs: 16px;
+
+  /* spacing */
+  --section-padding: 80px;
+  --content-max-width: 1400px;
+  --nav-height: 72px;
+  --header-height: var(--nav-height);
+}
+
+@media (width >= 900px) {
+  :root {
+    --heading-font-size-xxl: 64px;
+    --heading-font-size-xl: 48px;
+    --heading-font-size-l: 40px;
+    --heading-font-size-m: 24px;
+    --heading-font-size-s: 20px;
+    --heading-font-size-xs: 18px;
+  }
+}

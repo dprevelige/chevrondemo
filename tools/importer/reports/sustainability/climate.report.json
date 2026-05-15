@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.chevron.com/sustainability/climate",
+  "path": "sustainability/climate",
+  "timestamp": "2026-05-15T12:47:15.848Z",
+  "title": "Climate – Chevron.com — Chevron",
+  "template": "sustainability-topic",
+  "blocks": [
+    "hero-video",
+    "video-infographic",
+    "video-infographic",
+    "columns-strategy",
+    "cards-data",
+    "cards-data",
+    "cards-feature",
+    "quote-executive",
+    "carousel-article",
+    "columns-data"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "variantName": "quote-executive",
+  "baseBlock": "quote",
+  "version": "1.0.0",
+  "created": "2026-05-15T12:35:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/sustainability/environment",
+    "originPage": "Sustainability Environment page",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "executive-quote",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + blockquote + name + title",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "executive testimonials with photo",
+      "leadership quotes on dark backgrounds",
+      "featured quotes with portrait images"
+    ],
+    "notSuitableFor": [
+      "simple text-only quotes without images",
+      "customer testimonials in grids",
+      "inline pull quotes within articles"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/sustainability/environment", "/sustainability/climate"],
+    "reuseCount": 2,
+    "lastUsed": "2026-05-15T12:37:00.000Z"
+  }
+}

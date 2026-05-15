@@ -1,0 +1,52 @@
+{
+  "variantName": "carousel-article",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-05-14T15:42:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/who-we-are",
+    "originPage": "Who We Are corporate landing page",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "wide",
+    "purpose": "article-carousel",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + date + heading + CTA per slide",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "news article carousels with image, date, and headline",
+      "latest content/blog post sliders",
+      "newsroom featured article displays"
+    ],
+    "notSuitableFor": [
+      "image-only galleries without text",
+      "product showcases with detailed descriptions",
+      "hero-style full-screen carousels"
+    ]
+  },
+  "usage": {
+    "pagesUsing": [
+      "/who-we-are",
+      "/what-we-do",
+      "/sustainability",
+      "/index",
+      "/investors",
+      "/sustainability/environment",
+      "/sustainability/social-investment",
+      "/sustainability/climate",
+      "/what-we-do/energy",
+      "/what-we-do/technology-and-innovation",
+      "/who-we-are/culture",
+      "/who-we-are/history"
+    ],
+    "reuseCount": 12,
+    "lastUsed": "2026-05-15T15:25:00.000Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-feature",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-15T12:37:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/sustainability/climate",
+    "originPage": "sustainability climate page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "feature-showcase",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "illustration + heading + description + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "feature showcase cards with illustrations and descriptions",
+      "energy solutions or initiative cards with CTAs",
+      "scroll-triggered cards with image and text on teal/dark backgrounds"
+    ],
+    "notSuitableFor": [
+      "simple news article cards",
+      "data/metric cards without images",
+      "topic navigation cards without descriptions"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/sustainability/climate"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-15T12:37:00.000Z"
+  }
+}

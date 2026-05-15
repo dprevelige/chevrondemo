@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-tile",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-14T15:42:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/who-we-are",
+    "originPage": "Who We Are corporate landing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "colored",
+    "density": "spacious",
+    "purpose": "feature-highlight",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "heading + paragraph | image + linked card",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "split-tile layouts with colored backgrounds",
+      "feature highlight sections with image and text side by side",
+      "corporate content with heading, description, and linked sub-card"
+    ],
+    "notSuitableFor": [
+      "simple text-only columns",
+      "multi-column grid layouts with more than 2 columns",
+      "card grids with uniform items"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/who-we-are", "/what-we-do/energy"],
+    "reuseCount": 2,
+    "lastUsed": "2026-05-15T13:40:32.441Z"
+  }
+}

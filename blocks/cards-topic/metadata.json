@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-topic",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-14T19:47:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/sustainability",
+    "originPage": "Sustainability landing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "colored",
+    "density": "spacious",
+    "purpose": "topic-navigation",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading + paragraph + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "topic navigation cards with colored backgrounds",
+      "sustainability/category landing pages with 4 key topics",
+      "cards with large images and accent-colored backgrounds linking to sub-sections"
+    ],
+    "notSuitableFor": [
+      "simple text-only cards without images",
+      "article listing cards with dates",
+      "product cards with pricing"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/sustainability", "/sustainability/environment", "/sustainability/social-investment"],
+    "reuseCount": 3,
+    "lastUsed": "2026-05-15T12:35:00.000Z"
+  }
+}

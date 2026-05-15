@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-news",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-14T21:30:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/investors",
+    "originPage": "Investors landing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "news-cards",
+    "imagePattern": "mixed"
+  },
+  "contentPattern": {
+    "structure": "date + heading + CTA per card",
+    "buttonCount": 1,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "news article card grids with dates and headlines",
+      "press release listings with mixed image/text cards",
+      "investor news displays with colored card backgrounds"
+    ],
+    "notSuitableFor": [
+      "topic navigation cards with large images",
+      "product showcase cards with pricing",
+      "simple text-only card grids"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/investors"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-14T21:30:00.000Z"
+  }
+}
