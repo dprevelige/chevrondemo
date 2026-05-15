@@ -1,0 +1,39 @@
+{
+  "variantName": "accordion-social",
+  "baseBlock": "accordion",
+  "version": "1.0.0",
+  "created": "2026-05-15T12:35:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/sustainability/social-investment",
+    "originPage": "Social Investment sustainability page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "expandable-list",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "category label + title per item, expandable content",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "expandable content lists on dark backgrounds",
+      "category-grouped expandable items",
+      "social investment or initiative listings with details"
+    ],
+    "notSuitableFor": [
+      "FAQ sections with questions and answers on light backgrounds",
+      "simple text accordions without category labels",
+      "product feature accordions with images"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/sustainability/social-investment"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-15T12:35:00.000Z"
+  }
+}

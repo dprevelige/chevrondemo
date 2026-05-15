@@ -1,0 +1,50 @@
+{
+  "variantName": "hero-video",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-05-14T15:42:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/who-we-are",
+    "originPage": "Who We Are corporate landing page",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "minimal",
+    "purpose": "corporate-landing",
+    "imagePattern": "video"
+  },
+  "contentPattern": {
+    "structure": "heading + paragraph",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "corporate landing pages with video backgrounds",
+      "hero sections with autoplay background video",
+      "pages with minimal text overlay on dark video"
+    ],
+    "notSuitableFor": [
+      "product pages with static images",
+      "hero sections with multiple CTAs",
+      "light-themed hero sections"
+    ]
+  },
+  "usage": {
+    "pagesUsing": [
+      "/who-we-are",
+      "/what-we-do",
+      "/sustainability",
+      "/investors",
+      "/sustainability/social-investment",
+      "/sustainability/climate",
+      "/what-we-do/energy",
+      "/what-we-do/technology-and-innovation",
+      "/who-we-are/leadership",
+      "/who-we-are/culture"
+    ],
+    "reuseCount": 10,
+    "lastUsed": "2026-05-15T15:19:51.071Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-data",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-14T21:30:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/investors",
+    "originPage": "Investors landing page",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "data-display",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "list of links + financial data grid",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "two-column layouts with document links and data points",
+      "earnings/financial data displays with supporting materials",
+      "information-dense layouts with lists and metrics side by side"
+    ],
+    "notSuitableFor": [
+      "image-heavy side-by-side layouts",
+      "feature highlight cards with large images",
+      "visual gallery or mosaic layouts"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/investors", "/sustainability/social-investment"],
+    "reuseCount": 2,
+    "lastUsed": "2026-05-15T12:35:00.000Z"
+  }
+}

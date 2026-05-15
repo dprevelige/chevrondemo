@@ -1,0 +1,39 @@
+{
+  "variantName": "video-infographic",
+  "baseBlock": "video",
+  "version": "1.0.0",
+  "created": "2026-05-15T12:37:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/sustainability/climate",
+    "originPage": "sustainability climate page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "compact",
+    "purpose": "data-infographic",
+    "imagePattern": "video"
+  },
+  "contentPattern": {
+    "structure": "heading + video + citations",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "inline animated infographic videos on dark backgrounds",
+      "data visualization video embeds with heading context",
+      "autoplay looping videos showing statistics or metrics"
+    ],
+    "notSuitableFor": [
+      "hero background videos",
+      "YouTube/Vimeo embed videos requiring player controls",
+      "full-width video banners"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/sustainability/climate"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-15T12:37:00.000Z"
+  }
+}

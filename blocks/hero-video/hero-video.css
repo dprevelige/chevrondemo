@@ -1,0 +1,157 @@
+/* hero-video block — full-width video background with text overlay at bottom */
+
+/* Extracted values from source: chevron.com/who-we-are .c74.video-common */
+
+/* Full-width wrapper override */
+.hero-video-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.hero-video-container {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.hero-video-container > .hero-video-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+/* Remove first-section top padding override for hero */
+main > .section.hero-video-container:first-of-type {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Block root — source: 1440x900, relative container */
+.hero-video {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-dark-gray); /* rgb(107, 109, 111) fallback */
+  color: rgb(255 255 255);
+  text-align: center;
+
+  /* Use aspect ratio to maintain proportions without video loaded */
+  aspect-ratio: 16 / 9;
+}
+
+/* Video background — fills entire block */
+.hero-video .hero-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hero-video .hero-video-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Gradient overlay at top for nav readability */
+
+/* Source: linear-gradient(rgba(0,0,0,0.6) 0px, rgba(0,0,0,0) 280px) */
+.hero-video .hero-video-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 280px;
+  background: linear-gradient(rgb(0 0 0 / 60%) 0, rgb(0 0 0 / 0%) 280px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Text overlay area — positioned at bottom, overlapping the video */
+
+/* Source: position absolute, top ~63% of block height */
+
+/* No background here — let individual children control their own backgrounds */
+
+/* so mix-blend-mode on the heading can blend with the video behind it */
+.hero-video .hero-video-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+/* Heading wrapper — mix-blend-mode: screen creates video-through-text effect */
+
+/* Source: white bg, black text, mix-blend-mode: screen */
+
+/* Screen blend: black = transparent (shows video), white = opaque */
+.hero-video .hero-video-heading {
+  background-color: #fff;
+  mix-blend-mode: screen;
+  padding: 24px 24px 16px;
+}
+
+.hero-video .hero-video-heading h1 {
+  font-size: 48px;
+  font-weight: 400;
+  font-family: var(--heading-font-family);
+  line-height: 1;
+  letter-spacing: -1.4px;
+  color: rgb(0 0 0);
+  margin: 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Description wrapper — solid white, no blend */
+.hero-video .hero-video-description {
+  background-color: #fff;
+  padding: 0 24px 24px;
+}
+
+.hero-video .hero-video-description p {
+  font-size: 18px;
+  font-family: var(--body-font-family);
+  line-height: 24px;
+  color: rgb(0 0 0);
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* Desktop layout */
+@media (width >= 900px) {
+  .hero-video {
+    /* Source: 1440x900 overall, aspect ratio 8:5 */
+    aspect-ratio: 1440 / 900;
+  }
+
+  /* Heading wrapper */
+  .hero-video .hero-video-heading {
+    /* Source: padding 40px 40px 24px */
+    padding: 40px 40px 24px;
+  }
+
+  .hero-video .hero-video-heading h1 {
+    /* Source: 140px font-size, line-height 140px, letter-spacing -4.2px, margin 0 80px */
+    font-size: 140px;
+    line-height: 140px;
+    letter-spacing: -4.2px;
+    margin: 0 80px;
+  }
+
+  /* Description */
+  .hero-video .hero-video-description {
+    /* Source: padding 0 40px 40px */
+    padding: 0 40px 40px;
+  }
+
+  .hero-video .hero-video-description p {
+    /* Source: 24px font-size, line-height 30px */
+    font-size: 24px;
+    line-height: 30px;
+  }
+}

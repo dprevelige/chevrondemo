@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-mosaic",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-14T15:42:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/who-we-are",
+    "originPage": "Who We Are corporate landing page",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "compact",
+    "purpose": "visual-gallery",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "multiple images + video in grid",
+    "buttonCount": 0,
+    "imageCount": 5
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "decorative image mosaic or collage layouts",
+      "visual gallery sections with mixed images and video",
+      "dark-themed media grid displays"
+    ],
+    "notSuitableFor": [
+      "text-heavy column layouts",
+      "standard two-column content layouts",
+      "interactive carousel or slideshow content"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/who-we-are", "/what-we-do", "/index", "/who-we-are/our-brands"],
+    "reuseCount": 4,
+    "lastUsed": "2026-05-15T15:20:00.000Z"
+  }
+}

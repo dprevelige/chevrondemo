@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-icon",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-14T21:30:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/investors",
+    "originPage": "Investors landing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "icon-grid",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "text label + icon image per card",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "icon grids with text labels on dark backgrounds",
+      "priority/strategy displays with icon illustrations",
+      "feature highlight grids with small icons and short text"
+    ],
+    "notSuitableFor": [
+      "article cards with large photos",
+      "navigation cards with headings and descriptions",
+      "product cards with pricing information"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/investors", "/sustainability/social-investment"],
+    "reuseCount": 2,
+    "lastUsed": "2026-05-15T12:35:00.000Z"
+  }
+}

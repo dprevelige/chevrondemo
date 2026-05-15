@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-brand",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-15T15:20:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/who-we-are/our-brands",
+    "originPage": "Our Brands corporate page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "brand-detail",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image | heading + paragraph + links",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "brand detail sections with image and text side by side",
+      "product or sub-brand showcases with image, description, and links",
+      "side-by-side layouts on colored section backgrounds"
+    ],
+    "notSuitableFor": [
+      "mosaic or gallery image grids (use columns-mosaic)",
+      "feature cards with distinct colored panels (use columns-feature)",
+      "text-only or data-focused column layouts"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/who-we-are/our-brands"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-15T15:20:00.000Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "variantName": "carousel-event",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-05-14T21:30:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/investors",
+    "originPage": "Investors landing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "wide",
+    "purpose": "event-carousel",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "heading + date + CTA per slide",
+    "buttonCount": 1,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "text-only event carousels without images",
+      "event listing sliders with heading, date, and CTA",
+      "investor events and presentations displays"
+    ],
+    "notSuitableFor": [
+      "image-heavy article carousels",
+      "hero-style full-width carousels with backgrounds",
+      "product showcase carousels"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/investors"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-14T21:30:00.000Z"
+  }
+}

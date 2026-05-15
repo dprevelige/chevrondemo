@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.chevron.com/what-we-do/technology-and-innovation",
+  "path": "what-we-do/technology-and-innovation",
+  "timestamp": "2026-05-15T13:54:13.965Z",
+  "title": "Technology and Innovation — Chevron",
+  "template": "what-we-do-topic",
+  "blocks": [
+    "hero-video",
+    "carousel-article",
+    "carousel-article",
+    "carousel-feature"
+  ]
+}

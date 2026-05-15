@@ -1,0 +1,138 @@
+/* Block: columns-mosaic -- asymmetric image/video mosaic grid */
+
+/* Extracted values from source: chevron.com/who-we-are .c72.background-color-dark-blue */
+
+/* wrapper: full-width inside dark-blue section */
+.columns-mosaic-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+/* ===== Base / Mobile (stacked) ===== */
+.columns-mosaic {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 24px 16px 40px;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Flatten rows: remove row wrappers from visual flow */
+.columns-mosaic > div {
+  display: contents;
+}
+
+/* All cells (images + video) */
+.columns-mosaic > div > div {
+  border-radius: 12px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+/* Image cells */
+.columns-mosaic .columns-mosaic-img-col picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.columns-mosaic .columns-mosaic-img-col img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Video cell — override EDS button-container display:inline */
+.columns-mosaic .columns-mosaic-video-col {
+  display: block;
+  background-color: rgba(255 255 255 / 8%);
+}
+
+.columns-mosaic .columns-mosaic-video-col video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== Mobile: simple 2-col grid ===== */
+
+/* Image 1 (row1 cell1) spans left col across 2 rows */
+.columns-mosaic > div:first-child > div:nth-child(1) {
+  grid-row: span 2;
+}
+
+/* ===== Desktop (>= 900px) ===== */
+@media (width >= 900px) {
+  /*
+   * Source grid at 1440px viewport:
+   *   grid-template-areas: "a d c e" / "a b c e"
+   *   Cell a: ~351x351 square, col1, rows 1-2, align top
+   *   Cell d: ~396x228 landscape, col2, row1, pushed down ~186px
+   *   Cell b: ~396x228 video, col2, row2, margin-top 28px
+   *   Cell c: ~155x273 portrait, col3, rows 1-2, centered vertically
+   *   Cell e: ~332x417 tall, col4, rows 1-2, near top
+   *
+   * Using CSS grid with explicit row heights matching source.
+   * Cells have align-self and explicit height to match source proportions.
+   */
+  .columns-mosaic {
+    grid-template-columns: 28fr 30fr 15fr 27fr;
+    grid-template-rows: 290px 379px;
+    gap: 0;
+    padding: 24px 0 40px;
+  }
+
+  .columns-mosaic > div > div {
+    border-radius: 16px;
+  }
+
+  /* Cell a: image 1 — left, square, top-aligned */
+  .columns-mosaic > div:first-child > div:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    align-self: start;
+    aspect-ratio: 1 / 1;
+    max-width: 90%;
+    max-height: 375px;
+  }
+
+  /* Cell d: image 2 — col2, row1, pushed down */
+  .columns-mosaic > div:first-child > div:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
+    max-height: 228px;
+  }
+
+  /* Cell b: video — col2, row2 */
+  .columns-mosaic > div:first-child > div:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+    margin: 28px 0 0 26px;
+    max-height: 228px;
+  }
+
+  /* Cell c: image 3 — col3, portrait, vertically centered */
+  .columns-mosaic > div:last-child > div:nth-child(1) {
+    grid-column: 3;
+    grid-row: 1 / 3;
+    align-self: center;
+    margin: 0 0 0 32px;
+    max-width: 72%;
+    max-height: 290px;
+  }
+
+  /* Cell e: image 4 — col4, tall, near top */
+  .columns-mosaic > div:last-child > div:nth-child(2) {
+    grid-column: 4;
+    grid-row: 1 / 3;
+    align-self: start;
+    margin: 5px 0 0;
+    max-height: 440px;
+  }
+}

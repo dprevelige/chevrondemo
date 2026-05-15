@@ -1,0 +1,39 @@
+{
+  "variantName": "embed-map",
+  "baseBlock": "embed",
+  "version": "1.0.0",
+  "created": "2026-05-14T19:47:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/sustainability",
+    "originPage": "Sustainability landing page",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "interactive-map",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "heading + description + embedded interactive map",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "interactive map embeds showing global operations",
+      "embedded third-party visualization widgets",
+      "location-based interactive content"
+    ],
+    "notSuitableFor": [
+      "simple video embeds (use standard embed)",
+      "social media embeds",
+      "static image content"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/sustainability"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-14T19:47:00.000Z"
+  }
+}

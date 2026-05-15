@@ -1,0 +1,44 @@
+{
+  "variantName": "columns-feature",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-14T15:42:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/who-we-are",
+    "originPage": "Who We Are corporate landing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "colored",
+    "density": "wide",
+    "purpose": "feature-cards",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image | heading + paragraph + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "alternating image-text feature cards",
+      "side-by-side layouts with large image and colored text panel",
+      "navigation cards linking to sub-sections with accent colors"
+    ],
+    "notSuitableFor": [
+      "simple text-only columns",
+      "split-tile layouts with sub-cards (use columns-tile instead)",
+      "grid displays without distinct text panels"
+    ]
+  },
+  "usage": {
+    "pagesUsing": [
+      "/who-we-are",
+      "/index",
+      "/what-we-do/technology-and-innovation",
+      "/who-we-are/culture"
+    ],
+    "reuseCount": 4,
+    "lastUsed": "2026-05-15T15:19:51.161Z"
+  }
+}

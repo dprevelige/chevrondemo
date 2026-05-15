@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.chevron.com/who-we-are/culture",
+  "path": "who-we-are/culture",
+  "timestamp": "2026-05-15T15:34:27.138Z",
+  "title": "Chevron Culture — Chevron",
+  "template": "who-we-are-topic",
+  "blocks": [
+    "hero-video",
+    "columns-feature",
+    "columns-feature",
+    "columns-feature",
+    "columns-feature",
+    "carousel-article",
+    "carousel-image",
+    "carousel-feature",
+    "cards-data"
+  ]
+}

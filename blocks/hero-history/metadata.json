@@ -1,0 +1,39 @@
+{
+  "variantName": "hero-history",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-05-15T15:25:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/who-we-are/history",
+    "originPage": "Our History corporate page",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "history-landing",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "heading + paragraph + 1 CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "history or about pages with background image and download CTA",
+      "hero sections with heading, description, and single action button",
+      "dark-themed page introductions with background imagery"
+    ],
+    "notSuitableFor": [
+      "hero sections with video backgrounds (use hero-video)",
+      "hero sections with animated text (use hero-marquee)",
+      "hero sections without CTA buttons (use hero-brand)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/who-we-are/history"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-15T15:25:00.000Z"
+  }
+}

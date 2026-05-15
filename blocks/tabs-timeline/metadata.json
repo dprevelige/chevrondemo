@@ -1,0 +1,39 @@
+{
+  "variantName": "tabs-timeline",
+  "baseBlock": "tabs",
+  "version": "1.0.0",
+  "created": "2026-05-15T15:25:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/who-we-are/history",
+    "originPage": "Our History corporate page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "timeline",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "tab label + era heading + description + multiple timeline entries (year + text + image)",
+    "buttonCount": 0,
+    "imageCount": 27
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "chronological timeline displays with era-based tabs",
+      "history pages with grouped time periods and entries",
+      "dark-themed tabbed content with background images per entry"
+    ],
+    "notSuitableFor": [
+      "simple tabbed content without images",
+      "product feature tabs",
+      "FAQ-style tabbed content (use accordion instead)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/who-we-are/history"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-15T15:25:00.000Z"
+  }
+}

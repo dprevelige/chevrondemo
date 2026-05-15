@@ -1,0 +1,41 @@
+.quote-executive blockquote {
+  margin: 0 auto;
+  padding: 0 24px;
+  max-width: 900px;
+}
+
+@media (width >= 900px) {
+  .quote-executive blockquote {
+    padding: 0 32px;
+  }
+}
+
+.quote-executive blockquote .quote-executive-quotation {
+  font-size: 120%;
+}
+
+.quote-executive blockquote .quote-executive-quotation > :first-child {
+  text-indent: -0.5ch;
+}
+
+.quote-executive blockquote .quote-executive-quotation > :first-child::before,
+.quote-executive blockquote .quote-executive-quotation > :last-child::after {
+  line-height: 0;
+}
+
+.quote-executive blockquote .quote-executive-quotation > :first-child::before {
+  content: "\201C";
+}
+
+.quote-executive blockquote .quote-executive-quotation > :last-child::after {
+  content: "\201D";
+}
+
+.quote-executive blockquote .quote-executive-attribution {
+  text-align: right;
+}
+
+.quote-executive blockquote .quote-executive-attribution > :first-child::before {
+  content: "\2014";
+  padding-right: 0.5ch;
+}

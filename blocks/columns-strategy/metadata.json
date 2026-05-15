@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-strategy",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-15T12:37:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.chevron.com/sustainability/climate",
+    "originPage": "sustainability climate page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "strategy-pillars",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading per column",
+    "buttonCount": 0,
+    "imageCount": 2
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "two-column strategy pillar layouts with image above heading",
+      "side-by-side feature comparisons on dark backgrounds",
+      "visual columns with centered image and heading per item"
+    ],
+    "notSuitableFor": [
+      "columns with long text descriptions",
+      "columns with CTAs or buttons",
+      "more than 2 columns of content"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/sustainability/climate"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-15T12:37:00.000Z"
+  }
+}
