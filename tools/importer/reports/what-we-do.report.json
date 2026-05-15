@@ -2,13 +2,11 @@
   "status": "success",
   "url": "https://www.chevron.com/what-we-do",
   "path": "what-we-do",
-  "timestamp": "2026-05-14T20:00:05.630Z",
+  "timestamp": "2026-05-15T20:42:45.151Z",
   "title": "What We Do — Chevron",
-  "template": "what-we-do",
+  "template": "what-we-do-topic",
   "blocks": [
     "hero-video",
-    "columns-mosaic",
-    "columns-mosaic",
     "carousel-article"
   ]
 }
