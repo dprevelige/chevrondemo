@@ -1,4 +1,4 @@
-- [![Chevron](https://www.chevron.com/-/media/shared-media/images/hallmark-2023.png)](/)
+- [Chevron](/)
 
 ---
 
