@@ -4,9 +4,15 @@ export default function decorate(block) {
   const videoRow = rows[0];
   const textRow = rows[1];
 
-  // Extract video URL from the link in row 1
+  // Extract video URL from code element or link in row 1
+  const videoCode = videoRow.querySelector('code');
   const videoLink = videoRow.querySelector('a');
-  const videoUrl = videoLink ? videoLink.href || videoLink.textContent.trim() : '';
+  let videoUrl = '';
+  if (videoCode) {
+    videoUrl = videoCode.textContent.trim();
+  } else if (videoLink) {
+    videoUrl = videoLink.href || videoLink.textContent.trim();
+  }
 
   // Extract text content from row 2
   const textCell = textRow ? textRow.querySelector('div') : null;
