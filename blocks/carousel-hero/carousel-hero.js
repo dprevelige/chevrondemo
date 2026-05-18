@@ -78,6 +78,29 @@ function createSlide(row, slideIndex, carouselId) {
 
   row.querySelectorAll(':scope > div').forEach((column, colIdx) => {
     column.classList.add(`carousel-hero-slide-${colIdx === 0 ? 'image' : 'content'}`);
+
+    if (colIdx === 0) {
+      const videoUrl = column.querySelector('code');
+      const videoLink = column.querySelector('a[href$=".mp4"]');
+      const src = videoUrl?.textContent.trim() || videoLink?.href;
+
+      if (src) {
+        const poster = column.querySelector('img');
+        const video = document.createElement('video');
+        video.setAttribute('autoplay', '');
+        video.setAttribute('muted', '');
+        video.setAttribute('loop', '');
+        video.setAttribute('playsinline', '');
+        if (poster) video.setAttribute('poster', poster.src);
+        const source = document.createElement('source');
+        source.setAttribute('src', src);
+        source.setAttribute('type', 'video/mp4');
+        video.append(source);
+        column.textContent = '';
+        column.append(video);
+      }
+    }
+
     slide.append(column);
   });
 
