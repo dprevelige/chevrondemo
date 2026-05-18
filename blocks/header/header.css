@@ -119,9 +119,18 @@ header .nav-brand .default-content-wrapper {
   justify-content: center;
 }
 
-header nav .nav-brand img {
+header nav .nav-brand a {
+  display: block;
   width: 40px;
-  height: auto;
+  height: 40px;
+  background: url('https://www.chevron.com/-/media/shared-media/images/hallmark-2023.png') no-repeat center / contain;
+  font-size: 0;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+header nav .nav-brand img {
+  display: none;
 }
 
 /* nav sections — hidden on mobile, shown inline on desktop */
@@ -174,17 +183,28 @@ header nav .nav-tools a {
   font-size: var(--body-font-size-s);
 }
 
+header nav .nav-tools .default-content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 header nav .nav-tools .button-container {
   margin: 0;
+  display: inline;
 }
 
 header nav .nav-tools .button {
   margin: 0;
   border: none;
+  border-radius: 0;
   padding: 0;
   background: none;
   color: #fff;
   font-size: var(--body-font-size-s);
+  display: inline;
+  white-space: nowrap;
+  text-decoration: none;
 }
 
 /* expanded menu overlay — full screen dark background (mobile) */
