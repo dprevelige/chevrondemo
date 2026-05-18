@@ -1,4 +1,4 @@
-![the human energy company](https://www.chevron.com/-/media/chevron/Footer/footer-hallmark.svg?la=en&h=131&w=200&hash=01934D32B4670AE47B0829C6662F7A2E)
+the human energy company
 
 Chevron has always put people at the center of the energy conversation. Because we understand that the well-being of people everywhere depends on energy. Energy that is affordable, reliable and ever-cleaner.
 
@@ -52,4 +52,4 @@ Chevron has always put people at the center of the energy conversation. Because 
 
 ---
 
-&copy; 2001 – 2026 Chevron Corporation. All rights reserved.
+© 2001 – 2026 Chevron Corporation. All rights reserved.
