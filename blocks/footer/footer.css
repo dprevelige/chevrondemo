@@ -16,7 +16,10 @@ footer a:hover {
 
 footer .footer > div {
   margin: auto;
-  max-width: var(--content-max-width, 1400px);
+  max-width: 1200px;
+}
+
+footer .footer .section {
   padding: 40px 24px;
 }
 
@@ -31,24 +34,33 @@ footer .footer ul {
 }
 
 /* Section 1: Logo + tagline + CTA */
-footer .footer > div:first-child {
+footer .footer .section:first-child {
   padding-top: 60px;
   padding-bottom: 40px;
   border-bottom: 1px solid rgba(255 255 255 / 20%);
 }
 
-footer .footer > div:first-child img {
-  width: 120px;
-  height: auto;
+footer .footer .section:first-child .default-content-wrapper > p:first-child {
+  font-size: 0;
+  line-height: 0;
   margin-bottom: 20px;
 }
 
-footer .footer > div:first-child .button-container {
+footer .footer .section:first-child .default-content-wrapper > p:first-child::before {
+  content: '';
+  display: block;
+  width: 153px;
+  height: 100px;
+  background: url('https://www.chevron.com/-/media/chevron/Footer/footer-hallmark.svg?la=en&h=131&w=200&hash=01934D32B4670AE47B0829C6662F7A2E') no-repeat left center / contain;
+}
+
+footer .footer .section:first-child .button-container {
   display: block;
   margin-top: 16px;
 }
 
-footer .footer > div:first-child a.button {
+/* stylelint-disable-next-line no-descending-specificity */
+footer .footer .section:first-child a.button {
   color: #fff;
   text-decoration: underline;
   background: none;
@@ -56,98 +68,134 @@ footer .footer > div:first-child a.button {
   padding: 0;
   font-size: inherit;
   display: inline;
+  margin: 0;
+  white-space: normal;
 }
 
 /* Section 2: Link columns */
-footer .footer > div:nth-child(2) {
+footer .footer .section:nth-child(2) {
   padding-top: 40px;
   padding-bottom: 40px;
   border-bottom: 1px solid rgba(255 255 255 / 20%);
 }
 
-footer .footer > div:nth-child(2) > .default-content-wrapper > ul {
+footer .footer .section:nth-child(2) .default-content-wrapper > ul {
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
 }
 
 @media (width >= 900px) {
-  footer .footer > div:nth-child(2) > .default-content-wrapper > ul {
+  footer .footer .section:nth-child(2) .default-content-wrapper > ul {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-footer .footer > div:nth-child(2) > .default-content-wrapper > ul > li > strong {
-  display: block;
+/* stylelint-disable-next-line no-descending-specificity */
+footer .footer .section:nth-child(2) .default-content-wrapper > ul > li > p {
   font-family: var(--heading-font-family);
   font-size: var(--body-font-size-m, 16px);
   font-weight: 400;
   margin-bottom: 16px;
 }
 
-footer .footer > div:nth-child(2) > .default-content-wrapper > ul > li > ul > li {
+footer .footer .section:nth-child(2) .default-content-wrapper > ul > li > ul > li {
   margin-bottom: 8px;
 }
 
-footer .footer > div:nth-child(2) > .default-content-wrapper > ul > li > ul > li a:any-link {
+/* stylelint-disable-next-line no-descending-specificity */
+footer .footer .section:nth-child(2) .default-content-wrapper > ul > li > ul > li a:any-link {
   font-size: var(--body-font-size-s, 14px);
   opacity: 0.8;
 }
 
-footer .footer > div:nth-child(2) > .default-content-wrapper > ul > li > ul > li a:hover {
+footer .footer .section:nth-child(2) .default-content-wrapper > ul > li > ul > li a:hover {
   opacity: 1;
 }
 
 /* Section 3: Legal links */
-footer .footer > div:nth-child(3) {
+footer .footer .section:nth-child(3) {
   padding-top: 24px;
   padding-bottom: 24px;
   border-bottom: 1px solid rgba(255 255 255 / 20%);
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
-footer .footer > div:nth-child(3) ul {
+footer .footer .section:nth-child(3) ul {
   display: flex;
   flex-wrap: wrap;
   gap: 8px 24px;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
-footer .footer > div:nth-child(3) a:any-link {
+footer .footer .section:nth-child(3) a:any-link {
   font-size: var(--body-font-size-xs, 12px);
   opacity: 0.7;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
-footer .footer > div:nth-child(3) a:hover {
+footer .footer .section:nth-child(3) a:hover {
   opacity: 1;
 }
 
 /* Section 4: Social links */
-footer .footer > div:nth-child(4) {
+footer .footer .section:nth-child(4) {
   padding-top: 24px;
   padding-bottom: 24px;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
-footer .footer > div:nth-child(4) ul {
+footer .footer .section:nth-child(4) ul {
   display: flex;
-  gap: 16px;
+  gap: 20px;
+  align-items: center;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
-footer .footer > div:nth-child(4) a:any-link {
-  opacity: 0.7;
-  font-size: var(--body-font-size-xs, 12px);
+footer .footer .section:nth-child(4) a:any-link {
+  display: block;
+  width: 24px;
+  height: 24px;
+  font-size: 0;
+  overflow: hidden;
+  opacity: 0.8;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
-footer .footer > div:nth-child(4) a:hover {
+footer .footer .section:nth-child(4) a:hover {
   opacity: 1;
+  text-decoration: none;
+}
+
+footer .footer .section:nth-child(4) a[href*="facebook"] {
+  background-image: url('https://www.chevron.com/-/media/chevron/Footer/facebook.svg');
+}
+
+footer .footer .section:nth-child(4) a[href*="twitter"] {
+  background-image: url('https://www.chevron.com/-/media/chevron/Footer/twitter.svg');
+}
+
+footer .footer .section:nth-child(4) a[href*="instagram"] {
+  background-image: url('https://www.chevron.com/-/media/chevron/Footer/instagram.svg');
+}
+
+footer .footer .section:nth-child(4) a[href*="tiktok"] {
+  background-image: url('https://www.chevron.com/-/media/chevron/Footer/tiktok.svg');
+}
+
+footer .footer .section:nth-child(4) a[href*="youtube"] {
+  background-image: url('https://www.chevron.com/-/media/chevron/Footer/youtube.svg');
+}
+
+footer .footer .section:nth-child(4) a[href*="linkedin"] {
+  background-image: url('https://www.chevron.com/-/media/chevron/Footer/linkedin.svg');
 }
 
 /* Section 5: Copyright */
-footer .footer > div:last-child {
+footer .footer .section:last-child {
   padding-top: 0;
   padding-bottom: 40px;
   font-size: var(--body-font-size-xs, 12px);
@@ -155,7 +203,7 @@ footer .footer > div:last-child {
 }
 
 @media (width >= 900px) {
-  footer .footer > div {
+  footer .footer .section {
     padding-left: 32px;
     padding-right: 32px;
   }
