@@ -37,7 +37,7 @@ function createSlide(row, slideIndex) {
 
     codes.forEach((code) => {
       const text = code.textContent.trim();
-      if (text.endsWith('.mp4')) videoSrc = text;
+      if (text.includes('.mp4')) videoSrc = text;
       else if (text.match(/\.(jpg|jpeg|png|webp)/i)) posterSrc = text;
     });
 
