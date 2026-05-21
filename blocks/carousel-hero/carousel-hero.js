@@ -1,173 +1,109 @@
-import { fetchPlaceholders } from '../../scripts/aem.js';
+const SLIDE_DURATION = 8000;
 
-function updateActiveSlide(slide) {
-  const block = slide.closest('.carousel-hero');
-  const slideIndex = parseInt(slide.dataset.slideIndex, 10);
-  block.dataset.activeSlide = slideIndex;
-
+function showSlide(block, slideIndex) {
   const slides = block.querySelectorAll('.carousel-hero-slide');
+  const total = slides.length;
+  const idx = ((slideIndex % total) + total) % total;
+  block.dataset.activeSlide = idx;
 
-  slides.forEach((aSlide, idx) => {
-    aSlide.setAttribute('aria-hidden', idx !== slideIndex);
-    aSlide.querySelectorAll('a').forEach((link) => {
-      if (idx !== slideIndex) {
-        link.setAttribute('tabindex', '-1');
+  slides.forEach((slide, i) => {
+    slide.setAttribute('aria-hidden', i !== idx);
+    const video = slide.querySelector('video');
+    if (video) {
+      if (i === idx) {
+        video.currentTime = 0;
+        video.play().catch(() => {});
       } else {
-        link.removeAttribute('tabindex');
+        video.pause();
       }
-    });
-  });
-
-  const indicators = block.querySelectorAll('.carousel-hero-slide-indicator');
-  indicators.forEach((indicator, idx) => {
-    if (idx !== slideIndex) {
-      indicator.querySelector('button').removeAttribute('disabled');
-    } else {
-      indicator.querySelector('button').setAttribute('disabled', 'true');
     }
   });
 }
 
-export function showSlide(block, slideIndex = 0) {
-  const slides = block.querySelectorAll('.carousel-hero-slide');
-  let realSlideIndex = slideIndex < 0 ? slides.length - 1 : slideIndex;
-  if (slideIndex >= slides.length) realSlideIndex = 0;
-  const activeSlide = slides[realSlideIndex];
-
-  activeSlide.querySelectorAll('a').forEach((link) => link.removeAttribute('tabindex'));
-  block.querySelector('.carousel-hero-slides').scrollTo({
-    top: 0,
-    left: activeSlide.offsetLeft,
-    behavior: 'smooth',
-  });
-}
-
-function bindEvents(block) {
-  const slideIndicators = block.querySelector('.carousel-hero-slide-indicators');
-  if (!slideIndicators) return;
-
-  slideIndicators.querySelectorAll('button').forEach((button) => {
-    button.addEventListener('click', (e) => {
-      const slideIndicator = e.currentTarget.parentElement;
-      showSlide(block, parseInt(slideIndicator.dataset.targetSlide, 10));
-    });
-  });
-
-  block.querySelector('.slide-prev').addEventListener('click', () => {
-    showSlide(block, parseInt(block.dataset.activeSlide, 10) - 1);
-  });
-  block.querySelector('.slide-next').addEventListener('click', () => {
-    showSlide(block, parseInt(block.dataset.activeSlide, 10) + 1);
-  });
-
-  const slideObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) updateActiveSlide(entry.target);
-    });
-  }, { threshold: 0.5 });
-  block.querySelectorAll('.carousel-hero-slide').forEach((slide) => {
-    slideObserver.observe(slide);
-  });
-}
-
-function createSlide(row, slideIndex, carouselId) {
-  const slide = document.createElement('li');
+function createSlide(row, slideIndex) {
+  const slide = document.createElement('div');
   slide.dataset.slideIndex = slideIndex;
-  slide.setAttribute('id', `carousel-hero-${carouselId}-slide-${slideIndex}`);
   slide.classList.add('carousel-hero-slide');
+  if (slideIndex > 0) slide.setAttribute('aria-hidden', 'true');
 
-  row.querySelectorAll(':scope > div').forEach((column, colIdx) => {
-    column.classList.add(`carousel-hero-slide-${colIdx === 0 ? 'image' : 'content'}`);
+  const columns = row.querySelectorAll(':scope > div');
+  const mediaCol = columns[0];
+  const contentCol = columns[1];
 
-    if (colIdx === 0) {
-      const videoUrl = column.querySelector('code');
-      const videoLink = column.querySelector('a[href$=".mp4"]');
-      const src = videoUrl?.textContent.trim() || videoLink?.href;
+  if (mediaCol) {
+    const codes = mediaCol.querySelectorAll('code');
+    let videoSrc = '';
+    let posterSrc = '';
 
-      if (src) {
-        const poster = column.querySelector('img');
-        const video = document.createElement('video');
-        video.setAttribute('autoplay', '');
-        video.setAttribute('muted', '');
-        video.setAttribute('loop', '');
-        video.setAttribute('playsinline', '');
-        if (poster) video.setAttribute('poster', poster.src);
-        const source = document.createElement('source');
-        source.setAttribute('src', src);
-        source.setAttribute('type', 'video/mp4');
-        video.append(source);
-        column.textContent = '';
-        column.append(video);
-      }
+    codes.forEach((code) => {
+      const text = code.textContent.trim();
+      if (text.endsWith('.mp4')) videoSrc = text;
+      else if (text.match(/\.(jpg|jpeg|png|webp)/i)) posterSrc = text;
+    });
+
+    if (!videoSrc) {
+      const link = mediaCol.querySelector('a[href*=".mp4"]');
+      if (link) videoSrc = link.href;
+    }
+    if (!posterSrc) {
+      const img = mediaCol.querySelector('img');
+      if (img && img.src && !img.src.includes('about:error')) posterSrc = img.src;
     }
 
-    slide.append(column);
-  });
+    const videoWrap = document.createElement('div');
+    videoWrap.className = 'carousel-hero-slide-video';
 
-  const labeledBy = slide.querySelector('h1, h2, h3, h4, h5, h6');
-  if (labeledBy) {
-    slide.setAttribute('aria-labelledby', labeledBy.getAttribute('id'));
+    if (videoSrc) {
+      const video = document.createElement('video');
+      video.autoplay = slideIndex === 0;
+      video.muted = true;
+      video.loop = true;
+      video.playsInline = true;
+      video.setAttribute('playsinline', '');
+      video.setAttribute('muted', '');
+      if (posterSrc) video.poster = posterSrc;
+      const source = document.createElement('source');
+      source.src = videoSrc;
+      source.type = 'video/mp4';
+      video.append(source);
+      videoWrap.append(video);
+    } else if (posterSrc) {
+      const img = document.createElement('img');
+      img.src = posterSrc;
+      img.alt = '';
+      videoWrap.append(img);
+    }
+
+    slide.append(videoWrap);
+  }
+
+  if (contentCol) {
+    contentCol.className = 'carousel-hero-slide-content';
+    slide.append(contentCol);
   }
 
   return slide;
 }
 
-let carouselId = 0;
-export default async function decorate(block) {
-  carouselId += 1;
-  block.setAttribute('id', `carousel-hero-${carouselId}`);
-  const rows = block.querySelectorAll(':scope > div');
-  const isSingleSlide = rows.length < 2;
+export default function decorate(block) {
+  const rows = [...block.querySelectorAll(':scope > div')];
+  block.textContent = '';
+  block.dataset.activeSlide = 0;
 
-  const placeholders = await fetchPlaceholders();
-
-  block.setAttribute('role', 'region');
-  block.setAttribute('aria-roledescription', placeholders.carousel || 'Carousel');
-
-  const container = document.createElement('div');
-  container.classList.add('carousel-hero-slides-container');
-
-  const slidesWrapper = document.createElement('ul');
-  slidesWrapper.classList.add('carousel-hero-slides');
-  block.prepend(slidesWrapper);
-
-  let slideIndicators;
-  if (!isSingleSlide) {
-    const slideIndicatorsNav = document.createElement('nav');
-    slideIndicatorsNav.setAttribute('aria-label', placeholders.carouselSlideControls || 'Carousel Slide Controls');
-    slideIndicators = document.createElement('ol');
-    slideIndicators.classList.add('carousel-hero-slide-indicators');
-    slideIndicatorsNav.append(slideIndicators);
-    block.append(slideIndicatorsNav);
-
-    const slideNavButtons = document.createElement('div');
-    slideNavButtons.classList.add('carousel-hero-navigation-buttons');
-    slideNavButtons.innerHTML = `
-      <button type="button" class= "slide-prev" aria-label="${placeholders.previousSlide || 'Previous Slide'}"></button>
-      <button type="button" class="slide-next" aria-label="${placeholders.nextSlide || 'Next Slide'}"></button>
-    `;
-
-    container.append(slideNavButtons);
-  }
+  const slidesContainer = document.createElement('div');
+  slidesContainer.className = 'carousel-hero-slides';
 
   rows.forEach((row, idx) => {
-    const slide = createSlide(row, idx, carouselId);
-    slidesWrapper.append(slide);
-
-    if (slideIndicators) {
-      const indicator = document.createElement('li');
-      indicator.classList.add('carousel-hero-slide-indicator');
-      indicator.dataset.targetSlide = idx;
-      indicator.innerHTML = `<button type="button" aria-label="${placeholders.showSlide || 'Show Slide'} ${idx + 1} ${placeholders.of || 'of'} ${rows.length}"></button>`;
-      slideIndicators.append(indicator);
-    }
-    row.remove();
+    slidesContainer.append(createSlide(row, idx));
   });
 
-  container.append(slidesWrapper);
-  block.prepend(container);
+  block.append(slidesContainer);
 
-  if (!isSingleSlide) {
-    bindEvents(block);
+  if (rows.length > 1) {
+    let current = 0;
+    setInterval(() => {
+      current += 1;
+      showSlide(block, current);
+    }, SLIDE_DURATION);
   }
 }
